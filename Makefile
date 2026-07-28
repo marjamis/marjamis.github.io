@@ -13,7 +13,7 @@ helper: # Adapted from: https://marmelab.com/blog/2016/02/29/auto-documented-mak
 test: ## Builds and then runs tests against the application
 
 dev: ## Runs a dev version of the application
-	npx astro dev
+	npx astro dev --force
 
 prod: ## Builds the site for production and uses that as the local webserver source
 	npx astro build

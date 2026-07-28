@@ -58,7 +58,7 @@ const { title, rssFeedURL, headlinePost } = Astro.props;
       {
         headlinePost?.data.heroImage && (
           <>
-            <a href={`/posts/${headlinePost.slug}/`}>
+            <a href={`/posts/${headlinePost.id}/`}>
               <div>
                 <img class="hero-image-large" src={headlinePost.data.heroImage} alt="" />
                 <br />
