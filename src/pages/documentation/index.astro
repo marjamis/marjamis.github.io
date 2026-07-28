@@ -4,8 +4,9 @@ import Content from "../../content/documentation/index.mdx";
 
 import { type CollectionEntry, getCollection } from "astro:content";
 
-const pages = await getCollection("documentation", ({slug}) => {
-  return slug !== 'index';
+const pages = await getCollection("documentation", ({id}) => {
+  // Filters out the index page
+  return id !== 'index';
 });
 ---
 
@@ -22,7 +23,7 @@ const pages = await getCollection("documentation", ({slug}) => {
       <h2>Links</h2>
       {pages.map((page) => (
         <li>
-        <a href={`/documentation/${page.slug}/`}>{page.data.title}</a>
+          <a href={`/documentation/${page.id}/`}>{page.data.title}</a>
         </li>
       ))}
     </div>

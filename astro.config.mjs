@@ -7,4 +7,9 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
 	site: 'https://marjamis.github.io',
 	integrations: [mdx(), sitemap()],
+	vite: {
+		build: {
+			cssMinify: 'esbuild',
+		},
+	},
 });

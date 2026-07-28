@@ -11,7 +11,7 @@ const { pages } = Astro.props;
       <ul>
         {pages.map((page) => (
           <li>
-            <a href={`/fit_together/${page.slug}`}>{page.data.title}</a>
+            <a href={`/fit_together/${page.id}`}>{page.data.title}</a>
           </li>
         ))}
       </ul>

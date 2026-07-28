@@ -23,7 +23,7 @@ const tags = [
       {
         recent_posts.slice(1).map((post) => (
           <li>
-            <a href={`/posts/${post.slug}/`}>
+            <a href={`/posts/${post.id}/`}>
             <div>
 
               <img class="hero-image" src={post.data.heroImage} alt="" />
@@ -47,9 +47,10 @@ const tags = [
     <h2>Posts by Tag</h2>
     <div class="tags">
       {
-        tags.map((tag) => (
-          <span class="tag">
+        tags?.map((tag, index) => (
+          <span key={tag} class="tag">
             <a href={`/posts/tags/${tag}`}>{tag}</a>
+            {index < tags.length - 1 && " | "}
           </span>
         ))
       }
