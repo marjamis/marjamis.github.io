@@ -1,7 +1,14 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection } from 'astro:content';
+import { z } from 'astro/zod';
+import { glob } from 'astro/loaders';
+
+const defaultLoaderPattern = "**/*.{md,mdx}"
 
 const posts = defineCollection({
-	type: 'content',
+	loader: glob({
+		base: "./src/content/posts",
+		pattern: defaultLoaderPattern,
+	}),
 	// Type-check frontmatter using a schema
 	schema: z.object({
 		title: z.string(),
@@ -15,7 +22,10 @@ const posts = defineCollection({
 });
 
 const fit_together = defineCollection({
-	type: 'content',
+	loader: glob({
+		base: "./src/content/fit_together",
+		pattern: defaultLoaderPattern,
+	}),
 	// Type-check frontmatter using a schema
 	schema: z.object({
 		title: z.string(),
@@ -28,7 +38,10 @@ const fit_together = defineCollection({
 });
 
 const documentation = defineCollection({
-	type: 'content',
+	loader: glob({
+		base: "./src/content/documentation",
+		pattern: defaultLoaderPattern,
+	}),
 	// Type-check frontmatter using a schema
 	schema: z.object({
 		title: z.string(),
