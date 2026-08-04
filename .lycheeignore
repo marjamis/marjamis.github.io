@@ -1,1 +1,3 @@
 https://www.linkedin.com/in/*/
+# Excludes internal links which haven't been built by astro yet
+/fit_together/*

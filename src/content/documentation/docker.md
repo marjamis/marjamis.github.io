@@ -4,8 +4,7 @@ title: General Docker Information
 
 ### Docker PID 1 and Process Reaping
 
-**Adapted from:** [Docker and the PID 1 Zombie Reaping Problem](https://blog.phusion.nl/2015/01/20/docker-and-the-pid-1-zombie-reaping-problem/)
-
+**Adapted from:** [Docker and the PID 1 Zombie Reaping Problem](https://blog.phusion.nl/docker-and-the-pid-1-zombie-reaping-problem/)
 If a process terminates it turns into a defunct/zombie process, which formally are:
 
 > processes that have terminated but have not (yet) been waited for by their parent processes.
@@ -22,7 +21,7 @@ This is where a PID 1 process within a container which can reap is important. Th
 
 **More information:**
 
-- [Overlay2 UserGuide](https://docs.docker.com/engine/userguide/storagedriver/overlayfs-driver)
+- [Overlay2 UserGuide](https://docs.docker.com/engine/storage/drivers/overlayfs-driver/)
 
 #### General
 
