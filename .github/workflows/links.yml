@@ -11,13 +11,11 @@ jobs:
   linkChecker:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
 
       - name: Link Checker
         id: lychee
-        uses: lycheeverse/lychee-action@v2.0.2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: lycheeverse/lychee-action@v2.9.0
         with:
           args: --verbose --no-progress --timeout 10 --max-concurrency 2 --max-redirects 10 -u "Mozilla/5.0 Gecko/20100101 Firefox/120.0" **/*.md
 
@@ -26,9 +24,8 @@ jobs:
         run: echo "now=$(date +'%d-%m-%Y')" >> $GITHUB_OUTPUT
 
       - name: Create Issue From File
-        if: env.lychee_exit_code != 0
-        uses: peter-evans/create-issue-from-file@v4.0.1
-
+        if: steps.lychee.outputs.exit_code != 0
+        uses: peter-evans/create-issue-from-file@v6
         with:
           title: Automated Links Checker Report for ${{ steps.date.outputs.now }}
           content-filepath: ./lychee/out.md
