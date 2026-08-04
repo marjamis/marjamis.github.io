@@ -4,7 +4,7 @@ title: Project Planning
 
 This is a guide I use, there will be changes, when I'm starting a new project and planning to run it. While I'm not a program manager it still is an important skill and workflow to incorporate into your work, no matter the role in IT. Essentially if you're not working with others to reach your desired end goal, i.e. you're working by yourself, then it's probably not that big a project and may not have the people invested to carry through with large systemic changes you want to make.
 
-**Note:** Always incorporate [Design Thinking](https://education.nsw.gov.au/teaching-and-learning/curriculum/key-learning-areas/stem/early-stage-1-to-stage-3/project-based-learning-and-design-thinking/phases-of-design-thinking) into the process.
+**Note:** Always incorporate Design Thinking into the process.
 
 ### Project Management Phases
 

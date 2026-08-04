@@ -1,0 +1,3 @@
+exclude_path = [
+    "src/content/fit_together/index.md", # Temporary skip for links to pages astro hasn't build yet
+]
