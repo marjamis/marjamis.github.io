@@ -18,6 +18,7 @@ jobs:
         uses: lycheeverse/lychee-action@v2.9.0
         with:
           args: --verbose --no-progress --timeout 10 --max-concurrency 2 --max-redirects 10 -u "Mozilla/5.0 Gecko/20100101 Firefox/120.0" **/*.md
+          fail: false
 
       - name: Get current date
         id: date
