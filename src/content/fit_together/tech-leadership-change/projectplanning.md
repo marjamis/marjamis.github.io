@@ -43,7 +43,7 @@ This is a guide I use, there will be changes, when I'm starting a new project an
 - Create a tracker of issues and something like a sprint board for showing progress and current assignements. This should be defined by the timeline and required outputs
 - Write up a basic plan for running meetings and what should be involved. For more details look into documents created by McKenzie
 - [Guide to creating leadership and governance of a project](https://opensource.guide/leadership-and-governance/)
-- [RACI](https://racichart.org/the-raci-model/) useful for project management when trying to work out who is involved and how. There are also alternatives which provide other ways to perform this tracking.
+- [RACI](https://en.wikipedia.org/wiki/Responsibility_assignment_matrix) useful for project management when trying to work out who is involved and how. There are also alternatives which provide other ways to perform this tracking.
 
 #### 4 - Close
 
